@@ -1,0 +1,33 @@
+{
+  "name": "didact",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/tenhsor1/didact",
+  "author": "Ricardo Romo <ricardo.romo.ramirez@gmail.com>",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.6",
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^4.2.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "husky": "^2.3.0",
+    "prettier": "1.17.1",
+    "webpack": "^4.31.0",
+    "webpack-cli": "^3.3.2"
+  },
+  "scripts": {
+    "webpack": "webpack",
+    "start": "npm run webpack && http-server",
+    "eslint": "eslint lib/**.js",
+    "prettier": "prettier es5 --write \"{lib/**.js,test.js}\""
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run prettier && npm run eslint"
+    }
+  }
+}
